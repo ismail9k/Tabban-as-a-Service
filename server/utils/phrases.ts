@@ -6,7 +6,6 @@ export interface Phrase {
   id: number;
   text: string;
   translation: string;
-  category: string;
   level: string;
 }
 
@@ -21,29 +20,16 @@ export function randomInt(max: number): number {
  * Picks a random element from an array. Life is random. So is this.
  */
 export function randomPick<T>(arr: T[]): T {
-  return arr[randomInt(arr.length)];
+  return arr[randomInt(arr.length)]!;
 }
 
 /**
- * Returns all phrases, optionally filtered by category.
+ * Returns all phrases.
  */
-export function getPhrases(opts?: { category?: string }): Phrase[] {
-  let phrases = phrasesData as Phrase[];
-
-  if (opts?.category) {
-    phrases = phrases.filter((p) => p.category === opts.category.toLowerCase());
-  }
-
-  return phrases;
+export function getPhrases(): Phrase[] {
+  return phrasesData as Phrase[];
 }
 
-/**
- * Returns all unique categories from the phrase list.
- */
-export function getCategories(): string[] {
-  const phrases = phrasesData as Phrase[];
-  return [...new Set(phrases.map((p) => p.category))];
-}
 
 /**
  * Returns all intensity levels.
@@ -66,7 +52,6 @@ export function formatResponse(phrase: Phrase) {
   return {
     phrase: phrase.text,
     translation: phrase.translation,
-    category: phrase.category,
     level: phrase.level,
     meme_url: getRandomMeme(),
   };
