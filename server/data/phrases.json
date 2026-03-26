@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "text": "تبًّا لك",
+    "translation": "Damn you",
+    "level": "medium"
+  },
+  {
+    "id": 2,
+    "text": "سحقًا",
+    "translation": "Crush it (Damn it)",
+    "level": "mild"
+  },
+  {
+    "id": 3,
+    "text": "يا وغد",
+    "translation": "You scoundrel/villain",
+    "level": "medium"
+  },
+  {
+    "id": 4,
+    "text": "ماذا تريد أيها العبد",
+    "translation": "What do you want, you servant?",
+    "level": "savage"
+  },
+  {
+    "id": 5,
+    "text": "تبًّا",
+    "translation": "Damn",
+    "level": "mild"
+  },
+  {
+    "id": 6,
+    "text": "سحقًا لك",
+    "translation": "May you be crushed (Damn you)",
+    "level": "medium"
+  },
+  {
+    "id": 7,
+    "text": "ويلٌ لك",
+    "translation": "Woe unto you",
+    "level": "medium"
+  },
+  {
+    "id": 8,
+    "text": "ثكلتك أمك",
+    "translation": "May your mother be bereaved of you",
+    "level": "savage"
+  },
+  {
+    "id": 9,
+    "text": "لا أبا لك",
+    "translation": "You have no father (You bas****/worthless)",
+    "level": "savage"
+  },
+  {
+    "id": 10,
+    "text": "بؤسًا لك",
+    "translation": "Misery upon you",
+    "level": "savage"
+  },
+  {
+    "id": 11,
+    "text": "يا لك من عربيد",
+    "translation": "What a drunkard you are!",
+    "level": "savage"
+  }
+]
