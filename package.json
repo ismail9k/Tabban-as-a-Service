@@ -6,13 +6,18 @@
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "deploy": "npx wrangler pages deploy ./dist --project-name=ismail9k-tabban-as-a-service --branch=main",
-    "postinstall": "nuxt prepare"
+    "preview": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "postinstall": "nuxt prepare",
+    "cf-typegen": "wrangler types"
   },
   "dependencies": {
     "nuxt": "^4.4.2",
     "vue": "^3.5.30",
     "vue-router": "^5.0.4"
+  },
+  "devDependencies": {
+    "nitro-cloudflare-dev": "^0.2.2",
+    "wrangler": "^4.77.0"
   }
 }

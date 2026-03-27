@@ -4,9 +4,16 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   future: { compatibilityVersion: 4 },
   css: ['~/assets/css/main.css'],
+
   nitro: {
-    preset: 'cloudflare-pages',
+    preset: "cloudflare_module",
+
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true
+    }
   },
+
   app: {
     head: {
       title: 'TaaS – Tabban as a Service 💥',
@@ -22,4 +29,6 @@ export default defineNuxtConfig({
       ],
     },
   },
+
+  modules: ["nitro-cloudflare-dev"]
 })

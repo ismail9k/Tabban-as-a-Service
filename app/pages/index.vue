@@ -193,7 +193,7 @@
             <span>🌐</span>
             <strong>Base URL</strong>
           </div>
-          <div class="code-block">https://your-domain.pages.dev</div>
+          <div class="code-block">https://tabban.ismail9k.workers.dev/</div>
           <p class="api-note-text">
             Self-host it. It's free. It's open source. Share the تباً with the world.
           </p>
