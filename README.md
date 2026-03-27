@@ -74,6 +74,25 @@ This project is configured out-of-the-box for Cloudflare Pages.
 4. Framework preset: **Nuxt.js** (or build command `npm run build` and output directory `.output/public`).
 5. Deploy!
 
+### If you deploy from CLI
+
+Cloudflare Pages must use `wrangler pages deploy`, not `wrangler deploy`, or you'll get:
+
+- `Missing entry-point to Worker script or to assets directory`
+
+Use:
+
+```bash
+npm run build
+npm run deploy
+```
+
+Or explicitly:
+
+```bash
+npx wrangler pages deploy ./dist --project-name=ismail9k-tabban-as-a-service --branch=main
+```
+
 ## 🐋 Docker Support
 
 If you prefer to run this via Docker:
