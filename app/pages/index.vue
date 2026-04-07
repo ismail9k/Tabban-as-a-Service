@@ -93,17 +93,17 @@
           <button
             class="btn btn-primary btn-lg"
             :disabled="loading"
-            @click="fetchRandom({ level: selectedLevel })"
+            @click="handleFetchRandom"
           >
             <span v-if="loading" class="spinner" />
             <span v-else>🎲 Give me تباً</span>
           </button>
           <button
             class="btn btn-ghost btn-lg"
-            :disabled="loading"
+            :disabled="true"
             @click="fetchRoast(selectedLevel || 'savage')"
           >
-            🔥 Roast me
+            🔥 Roast me (coming soon)
           </button>
         </div>
 
@@ -247,6 +247,17 @@ const { data, loading, error, shakeKey, fetchRandom, fetchRoast } = useTabban()
 const selectedLevel = ref('')
 const copied = ref(false)
 
+
+function playFuuuuh() {
+  const audio = new Audio('/fuuuuh.mp3')
+  audio.volume = 0.1
+  audio.play()
+}
+
+function handleFetchRandom() {
+  fetchRandom({ level: selectedLevel.value })
+  playFuuuuh()
+}
 
 function lvlEmoji(lvl: string) {
   return { all: '🌈', mild: '😊', medium: '😬', savage: '💀' }[lvl] ?? '❓'
