@@ -35,5 +35,9 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["nitro-cloudflare-dev"]
+  site: {
+    url: 'https://tabban.lol',
+  },
+
+  modules: ["nitro-cloudflare-dev", "@nuxtjs/sitemap"]
 })
