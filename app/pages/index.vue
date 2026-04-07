@@ -13,7 +13,7 @@
             <a href="#playground" class="btn btn-ghost btn-sm">Playground</a>
             <a href="#api" class="btn btn-ghost btn-sm">API Docs</a>
             <a
-              href="https://github.com/ismail9k/tabban"
+              href="https://github.com/ismail9k/Tabban-as-a-Service"
               target="_blank"
               rel="noopener"
               class="btn btn-ghost btn-sm"
@@ -211,7 +211,7 @@
           </div>
           <p class="footer-text">
             Made with ❤️ and a lot of تباً.<br/>
-            <a href="https://github.com/ismail9k/tabban" target="_blank" class="footer-link">Contribute on GitHub</a>
+            <a href="https://github.com/ismail9k/Tabban-as-a-Service" target="_blank" class="footer-link">Contribute on GitHub</a>
           </p>
           <p class="footer-disclaimer">
             No feelings were permanently harmed in the making of this API. Probably.
