@@ -19,8 +19,8 @@ export default defineNuxtConfig({
       title: 'TaaS – Tabban as a Service 💥',
       meta: [
         { name: 'description', content: 'The world\'s most unnecessary yet essential API for Arabic rage phrases. Get your daily dose of تباً.' },
-        { name: 'og:title', content: 'TaaS – Tabban as a Service' },
-        { name: 'og:description', content: 'Random Arabic rage/sarcastic phrases + memes. Because someone had to build this.' },
+        { property: 'og:type', content: 'website' },
+        { name: 'twitter:card', content: 'summary_large_image' },
       ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

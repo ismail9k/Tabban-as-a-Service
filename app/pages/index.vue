@@ -223,10 +223,22 @@
 </template>
 
 <script setup lang="ts">
-import { getPhrases, randomPick } from '~~/server/utils/phrases';
+import { getPhrases, randomPick, getRandomMeme } from '~~/server/utils/phrases';
+
+const ogPhrase = randomPick(getPhrases());
+const ogMeme = getRandomMeme();
+const requestUrl = useRequestURL();
+const ogImageUrl = `${requestUrl.origin}${ogMeme}`;
 
 useHead({
   title: 'TaaS – Tabban as a Service 💥',
+  meta: [
+    { property: 'og:title', content: `${ogPhrase.text} – "${ogPhrase.translation}"` },
+    { property: 'og:description', content: 'Random Arabic rage/sarcastic phrases + memes. Because someone had to build this.' },
+    { property: 'og:image', content: ogImageUrl },
+    { name: 'twitter:title', content: `${ogPhrase.text} – "${ogPhrase.translation}"` },
+    { name: 'twitter:image', content: ogImageUrl },
+  ],
 })
 
 const { data, loading, error, shakeKey, fetchRandom, fetchRoast } = useTabban()
