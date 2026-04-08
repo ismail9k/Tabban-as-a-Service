@@ -116,9 +116,19 @@ function handleImgError(e: Event) {
 
           <!-- Share hint -->
           <div class="result-footer">
-            <button class="btn btn-ghost btn-sm" @click="copyPhrase">
-              {{ copied ? '✅ Copied!' : '📋 Copy phrase' }}
-            </button>
+            <div class="result-footer-actions">
+              <button class="btn btn-ghost btn-sm" @click="copyPhrase">
+                {{ copied ? '✅ Copied!' : '📋 Copy phrase' }}
+              </button>
+              <a
+                v-if="data"
+                :href="`/api/og?phrase=${encodeURIComponent(data.phrase)}&translation=${encodeURIComponent(data.translation)}&meme=${encodeURIComponent(data.meme_url)}`"
+                download="tabban.png"
+                class="btn btn-ghost btn-sm"
+              >
+                ⬇ Download image
+              </a>
+            </div>
             <span class="result-footer-hint">Hit the button again for more chaos 💥</span>
           </div>
         </div>
@@ -292,6 +302,12 @@ function handleImgError(e: Event) {
   align-items: center;
   justify-content: space-between;
   gap: 12px;
+  flex-wrap: wrap;
+}
+
+.result-footer-actions {
+  display: flex;
+  gap: 8px;
   flex-wrap: wrap;
 }
 
