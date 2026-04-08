@@ -80,7 +80,7 @@ export default defineEventHandler(async (event) => {
   let mimeType: string
   let memeBuffer: ArrayBuffer
 
-  if (cloudflare?.env?.ASSETS) {
+  if (!import.meta.dev && cloudflare?.env?.ASSETS) {
     // Production Cloudflare Pages: read static asset via ASSETS binding
     const assetRes = await cloudflare.env.ASSETS.fetch(new URL(memePath, 'https://assets.local'))
     if (!assetRes.ok) {
