@@ -27,8 +27,10 @@ function buildSvg(params: {
   const escapeXml = (s: string) =>
     s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1200" height="630">
-  <image href="${memeDataUrl}" x="0" y="0" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
+  // 900×472 keeps the 1.91:1 OG aspect ratio at 75% of 1200×630,
+  // bringing the PNG under 600 KB for WhatsApp compatibility.
+  return `<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="900" height="472">
+  <image href="${memeDataUrl}" x="0" y="0" width="900" height="472" preserveAspectRatio="xMidYMid slice"/>
   <defs>
     <linearGradient id="grad" x1="0" y1="1" x2="0" y2="0">
       <stop offset="0%"   stop-color="#0a0a0f" stop-opacity="0.97"/>
@@ -37,10 +39,10 @@ function buildSvg(params: {
       <stop offset="100%" stop-color="#0a0a0f" stop-opacity="0"/>
     </linearGradient>
   </defs>
-  <rect x="0" y="0" width="1200" height="630" fill="url(#grad)"/>
-  <text x="1176" y="36" font-family="Cairo" font-size="14" fill="white" fill-opacity="0.35" text-anchor="end" letter-spacing="2">tabban.lol</text>
-  <text x="600" y="530" font-family="Cairo" font-weight="700" font-size="72" fill="#ff3860" text-anchor="middle" direction="rtl" unicode-bidi="embed">${escapeXml(phrase)}</text>
-  <text x="600" y="580" font-family="Cairo" font-size="26" fill="white" fill-opacity="0.65" text-anchor="middle" font-style="italic">&quot;${escapeXml(translation)}&quot;</text>
+  <rect x="0" y="0" width="900" height="472" fill="url(#grad)"/>
+  <text x="882" y="27" font-family="Cairo" font-size="11" fill="white" fill-opacity="0.35" text-anchor="end" letter-spacing="2">tabban.lol</text>
+  <text x="450" y="398" font-family="Cairo" font-weight="700" font-size="54" fill="#ff3860" text-anchor="middle" direction="rtl" unicode-bidi="embed">${escapeXml(phrase)}</text>
+  <text x="450" y="435" font-family="Cairo" font-size="20" fill="white" fill-opacity="0.65" text-anchor="middle" font-style="italic">&quot;${escapeXml(translation)}&quot;</text>
 </svg>`
 }
 
