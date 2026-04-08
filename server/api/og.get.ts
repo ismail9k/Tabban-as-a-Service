@@ -1,5 +1,7 @@
 // server/api/og.get.ts
-import { Resvg } from '@cf-wasm/resvg/workerd'
+// In dev (Node.js) this resolves to @cf-wasm/resvg (node-compatible).
+// In production (Cloudflare Workers) nuxt.config aliasing swaps it to /workerd.
+import { Resvg } from '@cf-wasm/resvg'
 import { getPhrases, getRandomMeme, randomPick } from '../utils/phrases'
 
 function getExtension(path: string): string {

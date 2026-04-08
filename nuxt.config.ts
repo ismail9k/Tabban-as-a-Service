@@ -15,7 +15,15 @@ export default defineNuxtConfig({
 
     experimental: {
       wasm: true
-    }
+    },
+
+    // In production (Cloudflare Workers preset), swap the import to the
+    // workerd-specific build which uses the CF-native WASM module format.
+    $cloudflare_module: {
+      alias: {
+        '@cf-wasm/resvg': '@cf-wasm/resvg/workerd',
+      },
+    },
   },
 
   app: {
