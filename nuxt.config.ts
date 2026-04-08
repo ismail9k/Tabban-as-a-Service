@@ -11,6 +11,10 @@ export default defineNuxtConfig({
     cloudflare: {
       deployConfig: true,
       nodeCompat: true
+    },
+
+    experimental: {
+      wasm: true
     }
   },
 
