@@ -40,9 +40,9 @@ function buildSvg(params: {
     </linearGradient>
   </defs>
   <rect x="0" y="0" width="900" height="472" fill="url(#grad)"/>
-  <text x="882" y="27" font-family="Cairo" font-size="11" fill="white" fill-opacity="0.35" text-anchor="end" letter-spacing="2">tabban.lol</text>
-  <text x="450" y="398" font-family="Cairo" font-weight="700" font-size="54" fill="#ff3860" text-anchor="middle" direction="rtl" unicode-bidi="embed">${escapeXml(phrase)}</text>
-  <text x="450" y="435" font-family="Cairo" font-size="20" fill="white" fill-opacity="0.65" text-anchor="middle" font-style="italic">&quot;${escapeXml(translation)}&quot;</text>
+  <text x="882" y="27" font-family="Cairo" font-size="20" fill="white" fill-opacity="0.7" text-anchor="end" letter-spacing="2">tabban.lol</text>
+  <text x="450" y="398" font-family="Cairo" font-weight="700" font-size="70" fill="#ff3860" text-anchor="middle" direction="rtl" unicode-bidi="embed">${escapeXml(phrase)}</text>
+  <text x="450" y="435" font-family="Cairo" font-size="20" fill="white" fill-opacity="0.9" text-anchor="middle" font-style="italic">&quot;${escapeXml(translation)}&quot;</text>
 </svg>`
 }
 
