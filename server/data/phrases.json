@@ -64,5 +64,41 @@
     "text": "يا لك من عربيد",
     "translation": "What a drunkard you are!",
     "level": "savage"
+  },
+  {
+    "id": 12,
+    "text": "يا أرعن",
+    "translation": "You reckless fool (acts without thinking)",
+    "level": "medium"
+  },
+  {
+    "id": 13,
+    "text": "يا صفيق",
+    "translation": "You shameless one (no manners)",
+    "level": "medium"
+  },
+  {
+    "id": 14,
+    "text": "يا وغد",
+    "translation": "You vile wretch",
+    "level": "medium"
+  },
+  {
+    "id": 15,
+    "text": "يا أهوج",
+    "translation": "You impulsive hothead",
+    "level": "mild"
+  },
+  {
+    "id": 16,
+    "text": "يا أخرق",
+    "translation": "You clumsy fool",
+    "level": "mild"
+  },
+  {
+    "id": 17,
+    "text": "يا سفيه",
+    "translation": "You ignorant dimwit",
+    "level": "medium"
   }
 ]
